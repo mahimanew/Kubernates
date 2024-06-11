@@ -30,7 +30,7 @@ cat /etc/hosts
 
 
 
-### Set up the IPV4 bridge on all nodes
+### Check the connection
 
 In master node & In worker node:
 
