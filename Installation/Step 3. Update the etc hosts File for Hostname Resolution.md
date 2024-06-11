@@ -30,7 +30,15 @@ cat /etc/hosts
 
 
 
+###Set up the IPV4 bridge on all nodes
 
+In master node & In worker node:
+
+```
+ping -c 4 k8-master
+ping -c 4 k8-worker
+
+```
 
 
 
