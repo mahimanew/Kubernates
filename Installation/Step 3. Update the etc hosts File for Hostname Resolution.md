@@ -30,7 +30,7 @@ cat /etc/hosts
 
 
 
-###Set up the IPV4 bridge on all nodes
+### Set up the IPV4 bridge on all nodes
 
 In master node & In worker node:
 
