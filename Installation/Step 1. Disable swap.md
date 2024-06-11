@@ -1,4 +1,4 @@
-prerequisites: 2cpu, 2 gb ram,2gb disk space
+Prerequisites: 2cpu, 2 gb ram,2gb disk space
 
 ### what is swap and why we need to disable swap area during Kubernetes installation?
 
