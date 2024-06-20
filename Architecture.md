@@ -2,8 +2,9 @@
 <img src="https://github.com/mahimanew/Kubernates/assets/24412769/2935e708-4d14-4ee0-b449-60b4b2a8871f" align="center" width="500" height="300">
 
   
-<img src="https://github.com/mahimanew/Kubernates/assets/24412769/2935e708-4d14-4ee0-b449-60b4b2a8871f](https://github.com/mahimanew/Kubernates/assets/24412769/056a2913-5e8c-4831-8e62-ae91e59b9975" align="center" width="500" height="300">
+<img src="https://github.com/mahimanew/Kubernates/assets/24412769/b8787df4-7d30-4c9d-b64e-332941fbab5f" align="center" width="500" height="300">
  </p> 
+
 
 
 
