@@ -21,7 +21,7 @@ Manage, plan, schedule, monitor nodes
     <img src="https://github.com/mahimanew/Kubernates/assets/24412769/8061e36c-9b91-4859-9db2-76aa2e35bc62" align="center" width="500" height="300">
  </p> 
 
-  </p>
+
 
 ### Worker
 Hosting applications as containers
@@ -30,6 +30,10 @@ Hosting applications as containers
 - Kubelet
 - Kube-proxy
 - Docker engine
+
+  <p>
+    <img src="https://github.com/mahimanew/Kubernates/assets/24412769/9ab70e59-7624-4967-905b-cfe4685bbd71" align="center" width="500" height="300">
+ </p> 
   
 #### Kube-api server
 communicates between components
