@@ -17,6 +17,12 @@ Manage, plan, schedule, monitor nodes
 - Controller manager
 - etcd
 
+  <p>
+    <img src="https://github.com/mahimanew/Kubernates/assets/24412769/8061e36c-9b91-4859-9db2-76aa2e35bc62" align="center" width="500" height="300">
+ </p> 
+
+  </p>
+
 ### Worker
 Hosting applications as containers
 
