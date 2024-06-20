@@ -1,7 +1,7 @@
 ### What is kubernates?
-- Kubernates is a cloud application platform for managing containers accross multiple hosts.
-- It provides lots of features for container oriented application such as autoscalling, deployments, rolling, compute resources and storage management.
-- Like containers it runs anywhere including on bare mental, public cloud, data center or in the hybrid cloud.
+Kubernates is a cloud application platform for managing containers accross multiple hosts.
+It provides lots of features for container oriented application such as autoscalling, deployments, rolling, compute resources and storage management.
+Like containers it runs anywhere including on bare mental, public cloud, data center or in the hybrid cloud.
 
 ### Kubernates features:
 - Automatic binbacking - which means automatically places the containers based on the requirements
