@@ -17,7 +17,7 @@ Manage, plan, schedule, monitor nodes
 - Controller manager
 - etcd
 
-  <p>
+  <p align="center">
     <img src="https://github.com/mahimanew/Kubernates/assets/24412769/8061e36c-9b91-4859-9db2-76aa2e35bc62" align="center" width="500" height="300">
  </p> 
 
@@ -31,7 +31,7 @@ Hosting applications as containers
 - Kube-proxy
 - Docker engine
 
-  <p>
+  <p align="center">
     <img src="https://github.com/mahimanew/Kubernates/assets/24412769/9ab70e59-7624-4967-905b-cfe4685bbd71" align="center" width="500" height="300">
  </p> 
   
