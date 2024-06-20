@@ -1,5 +1,4 @@
-<img src="![image](https://github.com/mahimanew/Kubernates/assets/24412769/3d77ad18-df03-4a9c-995e-e0b93f5daf78)
-" alt="Image description" width="500" height="300">
+<img src="https://github.com/mahimanew/Kubernates/assets/24412769/2935e708-4d14-4ee0-b449-60b4b2a8871f" alt="Image description" width="500" height="300">
 
 ![image](https://github.com/mahimanew/Kubernates/assets/24412769/2935e708-4d14-4ee0-b449-60b4b2a8871f)
 
