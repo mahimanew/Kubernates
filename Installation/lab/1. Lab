@@ -1,105 +1,35 @@
-Lab Steps
-Task 1: SSH into the Whiz terminal
-Copy the SSH command and the Password of the Master Node to SSH with the Kubernetes cluster.
-Run the following command to SSH into the Terminal:
-
-
-
-Type yes if prompted for the SSH permission for the first time. Then, insert the password in the prompt as it is.
-
-
-Task 2: Verify Cluster Configuration
-In this step, we will ensure that the Kubernetes cluster is properly configured. We'll perform the following checks:
-
-Check kubectl Version: Execute the following command to verify the version of the kubectl package. It allows us to control the cluster through a command-line interface, enabling API requests to the master node and tasks on the worker node.
 
 kubectl version
 
-
-
-Verify Kubelet Service: Confirm the running status of the kubelet service, responsible for handling API requests within the cluster, using the following command. To exit enter CTRL+C: -
-
 systemctl status kubelet
-
-
-
-Verify Prerequisite Pods: Check if the prerequisite pods, essential for various cluster operations such as scheduling, network policy, route management, and API request handling, are up and running. Use the following command: -
 
 kubectl get pods --all-namespaces
 
-
-Task 3: Create a Pod with Apache Server
-In this step, we will launch a pod running the Apache web server inside a container. We will use the official container image of the web server which is httpd.
-
-Run the following command to deploy a pod with httpd container image.
-
 kubectl run server --image=httpd
-
-
-
-Verify the pod is running by the following command. Initially, the node will download the container image from the image registry and hence it will take a few seconds to spin up the container.
 
 kubectl get pods
 
-
-
-Now let's go inside the container and configure web page on top of the container image downloaded from the registry.
-
 kubectl exec server -it -- bash
-
-
-
-Note: You will see a change in the user and directory of the current terminal which implies that we are now inside the container.
-Task 4: Create and Publish the Page 
-Now that we have successfully created and configured the Apache web server inside a Kubernetes pod, the final step is to test its accessibility. This ensures that the deployed web server is reachable and serving content as expected.
-
-First, navigate to the document root folder of the web server. The document root is the directory from which the content is being served to the end user.
 
 cd /usr/local/apache2/htdocs
 
-
-
-To add the contents into the index.html file using echo, copy and paste the below command to the shell of the container. 
-
 echo "<html>Hi, We are testing web server</html>" > index.html
-
-
-
-Now, exit the container and return to the base Terminal by typing following command:
 
 exit
 
-Till here, we have launched and configured a pod and Apache web server is running inside it. And we configured a sample index page and pasted the same into the document root of the server.
-Task 5: Webserver Accessibility Test
-In this step, we will fetch the IP address of the running container and use a curl request to check if the web server is successfully hosted inside the container.
-
-Fetch the IP address of the container by executing the following command. Copy the IP address in your notepad to use it in the next step.
-
 kubectl describe pods server | grep IP
 
-
-
-Use a curl request within the terminal to check whether the container is hosting the web server or not. Replace <ip-of-pod> with the actual IP address ( in our case, it is 192.168.235.133) obtained from the previous step:
-
 curl <ip-of-pod>/index.html
-
-
-
-After executing the curl command, you should see the content from the index.html file displayed on the command line. This indicates that the web server is successfully hosted inside the container. Note: the server is currently only accessible locally, as we have not configured the networking and routing for the pod.
-Run the following command to delete the pod:
 
 kubectl delete pods server
 
 
 
-Task 6: Creating Multiple Containers in a Pod
-?In this step we will create new pod with 2 containers and do SSH inside them:
 
-Create a new YAML file for the Cluster IP service using the command:
 
-nano dual_Cont_pod.yaml
+vim Cont_pod.yaml
 
-Paste the following code into the file. Save and exit by pressing CTRL+X, then Y, and finally Enter. This YAML file uses label selectors for network communication and load balancing:
+
 
 apiVersion: v1
 kind: Pod
@@ -115,39 +45,19 @@ spec:
       command: ["/bin/bash", "-c", "while true; do echo Hello-Programmer; sleep 5 ; done"]
 
 
-Apply the service resource in the cluster with the command:
 
-kubectl apply -f dual_Cont_pod.yaml
-
-
-
-Verify that pod is created with 2 containers by running the below command:
+kubectl apply -f Cont_pod.yaml
 
 kubectl get pods
 
-
-
-SSH inside it using the following command:
-
 kubectl exec -it testpod1 -c c00 -- /bin/bash
-
-Create a new file using the following command:
 
 echo "Hello from inside the container" > myfile.txt
 
-
-
-Exit from the container by running the below command:
-
 exit
-
-Verify that the file is created inside container by running this command:
 
 kubectl exec -it testpod1 -c c00 -- ls /
 
-
-
-Delete all the Pods by running this command:
 
 kubectl delete pods --all
 
