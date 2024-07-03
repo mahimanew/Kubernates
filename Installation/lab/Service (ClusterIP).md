@@ -30,7 +30,7 @@ spec:
 kubectl apply -f rs.yaml
 ```
 ```
-vim node-port.yaml
+vim cluster-ip.yaml
 ```
 
 ```
