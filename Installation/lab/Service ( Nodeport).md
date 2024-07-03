@@ -40,7 +40,7 @@ kind: Service
 metadata:
   name: my-app
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - nodePort: 31000 
     port: 80
@@ -49,7 +49,7 @@ spec:
     app: nginx
 ```
 ```
-kubectl apply -f cluster-ip.yaml
+kubectl apply -f node-port.yaml
 kubectl get svc
 kubectl describe service my-app
 curl http://10.109.116.221
