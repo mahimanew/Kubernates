@@ -29,6 +29,9 @@ spec:
 ```
 kubectl apply -f rs.yaml
 ```
+```
+vim cluster-ip.yaml
+```
 
 ```
 apiVersion: v1
