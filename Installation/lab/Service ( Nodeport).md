@@ -52,6 +52,6 @@ spec:
 kubectl apply -f node-port.yaml
 kubectl get svc
 kubectl describe service my-app
-curl http://10.109.116.221
+curl http://worker-public-ip:nodeport
 kubectl delete service my-app
 ```
