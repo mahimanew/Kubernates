@@ -31,7 +31,7 @@ kubectl apply -f rs.yaml
 ```
 
 ```
-vim cluster-ip.yaml
+vim node-port.yaml
 ```
 
 ```
